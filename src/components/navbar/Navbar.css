@@ -20,20 +20,20 @@
 .nav-menu{
     display: grid;
     grid-template-columns: repeat(8, auto);
-    grid-gap: 10px;
+    grid-gap: 2px;
     list-style: none;
-    width: 70vw;
+    width: 60%;
+    text-align: center;
     justify-content: end;
-    margin-right: 2rem;
 }
 .nav-links{
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.4rem;
 }
 
 .nav-links:hover{
-    background-color: red;
+    background-color: #969696;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
@@ -48,4 +48,92 @@
 
 .menu-icon{
     display: none;
+}
+@media screen and (max-width:1024px){
+    .NavbarItems{
+        font-size: 0.8rem;
+    }
+    .navbar-logo{
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width:780px){
+    .NavbarItems{
+        position: relative;
+
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav-menu.active{
+        background:#6668f4;
+        left: 0;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+    .nav-links{
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        display: table;
+    }
+    .nav-links:hover{
+        background-color: #7577fa;
+        border-radius: 0px;
+
+    }
+    .navbar-logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+    }
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        
+    }
+    .fa-times{
+        color: #fff;
+        font-size: 2rem;
+    }
+    .navbar-logo{
+        color: #fff;
+        justify-self: start;
+        margin-left: 20px;
+        cursor: pointer;
+    } {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 8%;
+        background: #48d9e4;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .nav-links-mobile:hover{
+        background: #fff;
+        color: #6568f4;
+        transition: 250ms;
+    }
+    Button{
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-!root {
+root {
     --primary: #3a3a3a;
 }
 
@@ -11,7 +11,7 @@
 
 .btn:hover{
     padding: 8px 20px;
-    transition: all 0.8s ease-out;
+    transition: all 0.3s ease-out;
     background: #fff;
     color: #6568f4;
     transition: 250ms;
@@ -25,4 +25,21 @@
     background-color: transparent;
     color: #fff;
     padding: 8px 20px;
+    border-radius: 4px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--medium{
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.btn--large{
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-size: 22px;
+    color: #fff;
 }
